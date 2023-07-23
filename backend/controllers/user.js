@@ -3,10 +3,10 @@ const User = require('../models/user')
 const signup =  async (req, res) => {
     const {email, password} = req.body
     try {
-        User.signup(email, password)
-        res.status(201).json({message: 'User created', user: {email: email, password: password}})
+        const user = await User.signup(email, password)
+        res.status(201).json({message: 'User created', user})
     } catch (error) {
-        res.status(400).json({message: error.message})
+        res.status(400).json({error: error.message})
     }
 }
 
