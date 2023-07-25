@@ -10,7 +10,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchWorkouts = async () => {
-      const response = await fetch('/api/v1/workouts')
+      const response = await fetch('http://localhost:5000/api/v1/workouts')
       const json = await response.json()
 
       if (response.ok) {
