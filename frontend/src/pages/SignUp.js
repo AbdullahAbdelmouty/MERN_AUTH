@@ -1,6 +1,4 @@
-import React,{useState,useContext} from 'react'
-import { AuthContext } from '../context/AuthContext'
-import { authReducer } from '../context/AuthContext';
+import {useState} from 'react'
 import { useSginUp } from '../hooks/useSignUp';
 function SignUp() {
   const [email,setEmail] = useState('');
@@ -9,6 +7,7 @@ function SignUp() {
   const handleSubmit =  async(e) => {
     e.preventDefault();
     await postSignUp({email,password});
+    window.location.href = '/';
   };
   return (
     <form className="signup" onClick={handleSubmit}>
