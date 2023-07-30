@@ -11,6 +11,7 @@ const authMiddleware = (req, res, next) => {
         return res.status(401).json({ msg: 'No token, authorization denied' });
     try {
         const {_id} = jwt.verify(token, process.env.JWT_SECRET);
+        console.log(_id, "id");
         req.user = _id;
         next();
     } catch (e) {
