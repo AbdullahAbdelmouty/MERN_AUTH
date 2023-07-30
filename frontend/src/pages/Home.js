@@ -11,7 +11,7 @@ const Home = () => {
   const {user} = useContext(AuthContext);
   useEffect(() => {
     const fetchWorkouts = async () => {
-      const response = await fetch('https://workout-buddy-api-miii.onrender.com//api/v1/workouts',
+      const response = await fetch('https://workout-buddy-api-miii.onrender.com/api/v1/workouts',
         {method: 'GET', headers: {'Authorization': `Bearer ${user.token}`}}
       )
       const json = await response.json()
