@@ -15,15 +15,15 @@ function SignUp() {
         <div className="form-group">
             <label>Email address</label>
             <input type="email" className="form-control"
-            onChange={(e) => setEmail(e.target.value)}
             value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter email" />
         </div>
         <div className="form-group">
             <label>Password</label>
             <input type="password" className="form-control"
-            onChange={(e) => setPassword(e.target.value)}
             value={password}
+            onChange={(e) => setPassword(e.target.value)}
             placeholder="Enter password" />
         </div>
         {error && <div className="error">{error}</div>}
