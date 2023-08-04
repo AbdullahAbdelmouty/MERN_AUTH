@@ -10,7 +10,7 @@ function SignUp() {
     window.location.href = '/';
   };
   return (
-    <form className="signup" onClick={handleSubmit}>
+    <form className="signup" onSubmit={handleSubmit}>
     <h3>Sign Up</h3>
         <div className="form-group">
             <label>Email address</label>
