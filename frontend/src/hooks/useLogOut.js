@@ -1,8 +1,9 @@
 import { AuthContext } from "../context/AuthContext";
 import { useContext } from "react";
-import {dispatchWorkouts} from '../context/WorkoutsContext'
+import { useWorkoutsContext } from "./useWorkoutsContext";
 export const useLogOut = () => {
     const { dispatch } = useContext(AuthContext);
+    const {dispatch:dispatchWorkouts} = useWorkoutsContext()
     const logOut = ()=> {
         localStorage.removeItem('user');
         dispatch({type:'LOGOUT'});
