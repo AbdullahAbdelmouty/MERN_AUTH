@@ -1,1 +1,1 @@
-# MERN_AUTH
+# Workout_Buddy
