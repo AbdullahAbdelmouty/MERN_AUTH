@@ -15,7 +15,7 @@ const Home = () => {
         {method: 'GET', headers: {'Authorization': `Bearer ${user.token}`}}
       )
       const json = await response.json()
-
+      console.log(json);
       if (response.ok) {
         dispatch({type: 'SET_WORKOUTS', payload: json})
       }
