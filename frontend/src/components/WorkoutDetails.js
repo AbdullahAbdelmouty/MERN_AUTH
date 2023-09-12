@@ -55,7 +55,6 @@ const WorkoutDetails = ({ workout }) => {
       <p>{formatDistanceToNow(new Date(workout.createdAt), { addSuffix: true })}</p>
       </div>
       <div>
-      <FiEdit style={{fontSize:"1.4rem",cursor:"pointer"}} onClick={handleEditClick} />
       <MdDelete style={{fontSize:"1.4rem",cursor:"pointer"}} onClick={handleClick}/>
       </div>
     </div>
