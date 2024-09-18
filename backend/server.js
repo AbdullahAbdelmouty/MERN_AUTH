@@ -16,7 +16,7 @@ app.use(express.json())
 app.use('/api/v1/auth', userRoutes)
 app.use('/api/v1/workouts',authMiddleware, workoutRoutes)
 
-// connect to db
+// connect to db   ds
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     // listen for requests
